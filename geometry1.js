@@ -16,3 +16,11 @@ function PrismVolumeFormula(x, y, h) {
     let PrismV = Base * h;
     return PrismV;
 }
+
+let x = 5;
+let y = 10;
+let h = 15;
+
+Answer2 = PrismVolumeFormula(x, y, h);
+
+console.log("Whereas this prism's volume is " + Answer2 + " cm^3.");
