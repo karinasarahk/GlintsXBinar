@@ -1,8 +1,16 @@
 const express = require("express");
 const app = express();
+const transaksiRoute = require("./routes/transaksiRoute");
+
 
 // import route
 
-app.listen(express.urlencoded({ extended: false }));
+// Use to read req.body
+app.use(express.urlencoded({ extended: true}));
 
-app.listen(3000, () => console.log(""))
+// Define Route
+app.use("/transaksi", transaksiRoute);
+
+// Server running on port 3000
+
+app.listen(3000, () => console.log("Server running 3000!"));

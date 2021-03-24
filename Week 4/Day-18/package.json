@@ -1,7 +1,7 @@
 {
   "name": "day-18",
   "version": "1.0.0",
-  "description": "",
+  "description": "Latihan integrasi NodeJS dengan MySQL",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
