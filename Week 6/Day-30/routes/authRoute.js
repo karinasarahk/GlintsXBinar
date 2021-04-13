@@ -13,9 +13,20 @@ const auth = require("../middlewares/auth");
 // Make router
 const router = express.Router();
 
-// If user access /auth/signup (POST) & /auth/signin
-router.post("/signup", authValidator.signup, auth.signup, authController.getToken); // jgn lupa argument harus urut!
+// If user access /auth/signup (POST)
+router.post(
+  "/signup",
+  authValidator.signup,
+  auth.signup,
+  authController.getToken
+);
 
-router.post("/signin", authValidator.signin, auth.signin, authController.getToken);
+// If user access /auth/signin (POST)
+router.post(
+  "/signin",
+  authValidator.signin,
+  auth.signin,
+  authController.getToken
+);
 
 module.exports = router;
